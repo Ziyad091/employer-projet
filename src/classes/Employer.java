@@ -8,31 +8,25 @@ public class Employer {
 	private String nom;
 	private String prenom;
 	private int age;
-	private String sexe;
 	private String pole;
-	private LocalDate dateEntree;
-	private LocalDate dateSortie;
 	private float salaire;
 	private boolean actif;
 	
 	public Employer() {
-		
+		super();
 	}
-	
-	public Employer(int id, String nom, String prenom, int age, String sexe, String pole, LocalDate dateEntree, LocalDate dateSortie, float salaire, boolean actif ) {
+
+	public Employer(int id, String nom, String prenom, int age, String pole, float salaire, boolean actif) {
+		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
-		this.sexe = sexe;
 		this.pole = pole;
-		this.dateEntree = dateEntree;
-		this.dateSortie = dateSortie;
 		this.salaire = salaire;
 		this.actif = actif;
-			
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -65,36 +59,12 @@ public class Employer {
 		this.age = age;
 	}
 
-	public String getSexe() {
-		return sexe;
-	}
-
-	public void setSexe(String sexe) {
-		this.sexe = sexe;
-	}
-
 	public String getPole() {
 		return pole;
 	}
 
 	public void setPole(String pole) {
 		this.pole = pole;
-	}
-
-	public LocalDate getDateEntree() {
-		return dateEntree;
-	}
-
-	public void setDateEntree(LocalDate dateEntree) {
-		this.dateEntree = dateEntree;
-	}
-
-	public LocalDate getDateSortie() {
-		return dateSortie;
-	}
-
-	public void setDateSortie(LocalDate dateSortie) {
-		this.dateSortie = dateSortie;
 	}
 
 	public float getSalaire() {
@@ -115,9 +85,10 @@ public class Employer {
 
 	@Override
 	public String toString() {
-		return "["+ this.id + "," + this.nom + "," + this.prenom + "," + this.age + "," + this.sexe + "," + this.pole + "," + this.dateEntree + "," + this.dateSortie + "," + this.salaire + "," + this.actif + "," +  "]";
-	
-	
+		return "Employer : [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", pole=" + pole
+				+ ", salaire=" + salaire + ", actif=" + actif + "]";
 	}
+
+	
 
 }
