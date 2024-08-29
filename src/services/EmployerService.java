@@ -20,7 +20,10 @@ public class EmployerService {
 	
 	public String getInformation(Employer employer) {
 		
-		return null;
+		return employer.toString();
+		
+	
+	
 			
 	}
 		
